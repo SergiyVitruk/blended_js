@@ -119,9 +119,15 @@
 
 // function checkLogin() {
 //   let login = prompt('Введіть ваш логін');
-//   if (login === 'Адмін') {
+
+//   if (login === null) {
+//     alert('Скасовано');
+//   } else if (login === 'Адмін') {
 //     let password = prompt('Введіть ваш пароль');
-//     if (password === 'Я головний') {
+
+//     if (password === null) {
+//       alert('Скасовано');
+//     } else if (password === 'Я головний') {
 //       alert('Добрий день!');
 //     } else {
 //       alert('Невірний пароль!');
@@ -129,8 +135,6 @@
 //   } else {
 //     alert('Я вас не знаю');
 //   }
-
-//   alert('Скасовано');
 
 //   console.log(login);
 // }
@@ -140,8 +144,10 @@
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
 // function showNumber() {
-//   while (let i = 0, i <= 20, i++) {
-
+//   let i = 0;
+//   while (i <= 20) {
+//     console.log(i);
+//     i++;
 //   }
 // }
 
@@ -164,33 +170,53 @@
 //     }
 //   }
 
-//   console.log(sum);
+//   return sum;
 // }
 
 // getNumbers(5, 9);
-
 
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
-function min(a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    console.log('Not a number!');
-  } else {
-    console.log(Math.min(a, b));
-  }
-}
+// function min(a, b) {
+//   if (typeof a !== 'number' || typeof b !== 'number') {
+//     return 'Not a number!';
+//   } else {
+//     return Math.min(a, b);
+//   }
+// }
 
-min(5, 3);
+// // min(5, 3);
 
 // Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
 // якщо параметр age більше чи дорівнює 18.
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
-function isAdult(age) {
-  if (age >= 18) {
-    console.log(true);
-  } else
-}
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
+//   } else {
+//     return confirm('Вам менше 18. Ви впевнені, що хочете продовжити?');
+//   }
+// }
+
+// isAdult(16);
+
+// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('fizzbuzz');
+//     } else if (i % 3 === 0) {
+// console.log('fizz');
+//     } else if (i % 5 === 0) {
+// console.log('buzz');
+//     } 
+//   }
+// }
